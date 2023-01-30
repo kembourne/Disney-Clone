@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+    color: #fff;
+    font-style: none;
+    
+}
+html { 
+    background: url(../images/home-background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+.navimg{
+    width: 80px;
+    padding: 10px;
+
+}
+.homeicon{
+    width: 30px;
+}
+.navitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+   /* margin-left: 20px; */
+}
+.navitems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+  
+   
+}
+.navitem{
+
+    position: relative;
+}
+.navitem::before{
+    content: "";
+    position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2px;
+background-color: #fff;
+border-radius: 4px;
+scale: 0 1;
+transform-origin: left;
+transition: scale 0.5 ;
+}
+.navitem:hover::before{
+scale: 1;
+transform-origin: left;
+transition: scale 0.5 ;
+}
+.navmain{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+    flex-direction: row;
+  gap: 25px;
+    /* position: fixed; */
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.videocardmain{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  margin-top: 50px;
+
+}
+.videocard{
+    width: 165px;
+    height: 95px;
+  border:1px solid #fff;
+  border-radius:10px;
+  transition: 0.2s all ease-in;
+  
+}
+
+.videoimage{
+    width: inherit;
+    height: fit-content;
+    position: absolute;
+}
+
+.video{
+ width: inherit;
+ height: fit-content;
+
+ opacity: 0;
+   z-index: -1;
+border-radius: inherit;
+overflow: hidden;
+
+}
+
+ .video:hover{
+    opacity: 1;
+}
+.videocard{
+    box-shadow: -8px 10px 35px 7px rgba(0,0,0,0.61);
+-webkit-box-shadow: -8px 10px 35px 7px rgba(0,0,0,0.61);
+-moz-box-shadow: -8px 10px 35px 7px rgba(0,0,0,0.61);
+
+
+}
+.videocard:hover{
+    box-shadow: -15px 24px 38px 11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -15px 24px 38px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: -15px 24px 38px 11px rgba(0,0,0,0.75);
+    transform: scale(1.05);
+    opacity: 1;
+
+}
+
+.slider{
+    width: 100%;
+
+}
+.image{
+   
+    width: 100%;
+    height: auto; 
+}
+.slider button{
+    
+    color: #fff;
+
+   
+}
+@media only screen  and (max-width:500px){
+    /* .slider{
+        width: 80%;
+    } */
+   .image{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   }
+
+}
+.slick-active button{
+    color: #fff;
+}
+.loginmain{
+    width: 100vw;
+ height: 100vh;
+    background: url(../images/login-background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+.imagelogin{
+width: 500px;
+height: min-content;
+}
+.loginbutton{
+    width: 500px;
+    height: 50px;
+    background-color: rgb(95, 95, 228);
+    border: 1px solid #fff;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.loginbutton:hover{
+transform: scale(1.02);
+transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.loginnavbarmain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+overflow: hidden;
+    
+
+}
+
+.loginnavbarinner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+   padding: 20px 30px;
+    
+}
+.loginbutton2{
+    width: 200px;
+    height: 50px;
+   background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.moviecardmain{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.recommendbox{
+    width: 250px;
+    height: 120px;
+    border: 1px solid white;
+}
+@media only screen and (min-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+   
+  }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    body {
+      font-size: 15px;
+      
+    }
+    .videocard{
+width: 100px;
+height: 60px;
+    }
+   
+  }
+  @media only screen and (max-width: 479px) {
+    body {
+        font-size: 14px;
+    }
+    .videocardmain{
+     flex-direction: column;   
+     gap: 30px
+     ;
+    }
+    .videocard{
+        width: 300px;
+        height: fit-content;
+
+    }
+    .recommendbox{
+        width: 120px;
+        height: 60px;
+        border: 1px solid white;
+    }
+    .navitems{
+      display: none;
+    }
+
+  }
